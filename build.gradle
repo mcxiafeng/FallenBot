@@ -1,0 +1,16 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.5.10'
+    id 'org.jetbrains.kotlin.plugin.serialization' version '1.5.10'
+
+    id 'net.mamoe.mirai-console' version '2.16.0'
+}
+
+group = "top.mcxiafeng"
+version = "0.1.0"
+
+repositories {
+    if (System.getenv("CI")?.toBoolean() != true) {
+//        maven("https://maven.aliyun.com/repository/public") // 阿里云国内代理仓库
+    }
+    mavenCentral()
+}
